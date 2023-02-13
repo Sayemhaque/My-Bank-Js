@@ -1,32 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- link css -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>My-Bank</title>
-</head>
-<body class="bg-black">
-   <header>
-    <h1 class="text-center mt-16 text-5xl fw-bold text-white">Welcome to <span class="text-yellow-200">Sayem-Bank</span></h1>
-   </header>
-   <main>
-    <section class="bg-blue-100  w-9/12 mx-auto mt-24">
+  </head>
+  <body class="bg-black">
+    <header>
+      <h1 class="text-center mt-16 text-5xl fw-bold text-white">
+        Welcome to <span class="text-yellow-200">Sayem-Bank</span>
+      </h1>
+    </header>
+    <main>
+      <section class="bg-blue-100 w-9/12 mx-auto mt-24">
         <form class="p-4 w-9/12 mx-auto">
-            <h2 class="font-bold text-4xl">Log In</h2>
-            <input type="email" required class="px-2 py-2 block w-9/12 mt-8" id="email" placeholder="Enter Your Email">
-            <p id="email-error" class="text-red-600"></p>
-            <input type="password" required class="px-2 py-2 block w-9/12 mt-8" id="password" placeholder="Password">
-            <p id="password-error" class="text-red-600"></p>
-            <button id="submit-btn" class="px-7 py-2 bg-yellow-200 mt-8">Submit</button>
+          <h2 class="font-bold text-4xl">Log In</h2>
+          <input
+            type="email"
+            required
+            class="px-2 py-2 block w-9/12 mt-8"
+            id="email"
+            placeholder="Enter Your Email"
+          />
+          <p id="email-error" class="text-red-600"></p>
+          <input
+            type="password"
+            required
+            class="px-2 py-2 block w-9/12 mt-8"
+            id="password"
+            placeholder="Password"
+          />
+          <p id="password-error" class="text-red-600"></p>
+          <button id="submit-btn" class="px-7 py-2 bg-yellow-200 mt-8">
+            Submit
+          </button>
         </form>
-    </section>
-   </main>
-   <!-- Link javascript file -->
-   <script src="./main.js"></script>
-</body>
+      </section>
+    </main>
+    <!-- Link javascript file -->
+    <script src="./main.js"></script>
+  </body>
 </html>

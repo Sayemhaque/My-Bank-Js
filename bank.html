@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- link css file -->
+    <link rel="stylesheet" href="style.css">
     <title>My-Bank</title>
   </head>
   <body class="bg-black">
@@ -16,10 +18,10 @@
     </header>
     <main>
       <section class="h-[600px] mt-10 w-9/12 mx-auto p-2">
-        <div class="grid grid-cols-3 gap-10 justify-items-center">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-10 justify-items-center">
           <div class="bg-blue-100 w-full p-10">
             <p class="text-2xl">Deposite</p>
-            <p class="text-4xl font-bold mt-1" id="deposite-amount">$00</p>
+            <p class="text-4xl font-bold mt-1" >$<span id="deposite-amount">00</span></p>
           </div>
           <div class="bg-red-100 w-full p-10">
             <p class="text-2xl">Withdraw</p>
@@ -27,23 +29,23 @@
           </div>
           <div class="bg-green-100 w-full p-10">
             <p class="text-2xl">Balance</p>
-            <p class="text-4xl font-bold mt-1" id="balance-amount">$1200</p>
+            <p class="text-4xl font-bold mt-1" >$<span id="balance-amount">1200</span></p>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-10 mt-16 justify-items-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 mt-16 justify-items-center">
           <div class="bg-blue-100 w-full p-12">
-            <p class="text-2xl font-bold">Deposite</p>
+            <p class="text-2xl font-bold ">Deposite</p>
             <input
               id="deposite-input"
-              type="text"
+              type="number"
               class="px-2 py-2 w-full mt-3"
               placeholder="$ amount you want to deposite"
             />
+            <p id="deposite-error" class="text-red-500"></p>
             <button
               id="deposite-btn"
               class="px-8 py-2 bg-red-300 font-bold text-sm mt-5"
-            >
-              Deposite
+            > Deposite
             </button>
           </div>
           <div class="bg-purple-100 w-full p-12">
