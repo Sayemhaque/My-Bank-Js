@@ -22,6 +22,7 @@ submitBtn.addEventListener("click", function (e) {
   //password
   const password = passwordField.value;
 
+  // Login form and form varification
   if (email === "sayem1000@gmail.com" && password === "joinmybank123") {
     window.location.href = "bank.html";
     emailField.value = "";
@@ -64,3 +65,6 @@ submitBtn.addEventListener("click", function (e) {
   
 }
 });
+
+
+

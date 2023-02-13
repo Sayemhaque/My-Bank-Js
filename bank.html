@@ -1,36 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- link tailwind css -->
     <script src="https://cdn.tailwindcss.com"></script>
     <title>My-Bank</title>
-</head>
-<body class="bg-black">
-   <header>
-    <h1 class="text-center mt-16 text-5xl fw-bold text-white">Lets get some <span class="text-yellow-100">Money!!</span></h1>
-   </header>
-   <main>
-    <section class=" h-[600px] mt-10  p-2">
-        <div  class="grid grid-cols-3 gap-10  justify-items-center ">
-            <div class="bg-blue-100 w-full p-10">
-                <p class="text-2xl">Deposite</p>
-                <p class="text-4xl font-bold mt-1">$00</p>
-            </div>
-            <div class="bg-red-100 w-full p-10">
-                <p class="text-2xl ">Withdraw</p>
-                <p class="text-4xl font-bold mt-1">$00</p>
-            </div>
-            <div class="bg-green-100 w-full p-10">
-                <p class="text-2xl">Balance</p>
-                <p class="text-4xl font-bold mt-1">$1200</p>
-            </div>
+  </head>
+  <body class="bg-black">
+    <header>
+      <h1 class="text-center mt-16 text-5xl fw-bold text-white">
+        Lets get some <span class="text-yellow-100">Money!!</span>
+      </h1>
+    </header>
+    <main>
+      <section class="h-[600px] mt-10 w-9/12 mx-auto p-2">
+        <div class="grid grid-cols-3 gap-10 justify-items-center">
+          <div class="bg-blue-100 w-full p-10">
+            <p class="text-2xl">Deposite</p>
+            <p class="text-4xl font-bold mt-1" id="deposite-amount">$00</p>
+          </div>
+          <div class="bg-red-100 w-full p-10">
+            <p class="text-2xl">Withdraw</p>
+            <p class="text-4xl font-bold mt-1" id="withdraw-amount">$00</p>
+          </div>
+          <div class="bg-green-100 w-full p-10">
+            <p class="text-2xl">Balance</p>
+            <p class="text-4xl font-bold mt-1" id="balance-amount">$1200</p>
+          </div>
         </div>
-    </section>
-   </main>
-   <!-- Link javascript file -->
-   <script src="./main.js"></script>
-</body>
+        <div class="grid grid-cols-2 gap-10 mt-16 justify-items-center">
+          <div class="bg-blue-100 w-full p-12">
+            <p class="text-2xl font-bold">Deposite</p>
+            <input
+              id="deposite-input"
+              type="text"
+              class="px-2 py-2 w-full mt-3"
+              placeholder="$ amount you want to deposite"
+            />
+            <button
+              id="deposite-btn"
+              class="px-8 py-2 bg-red-300 font-bold text-sm mt-5"
+            >
+              Deposite
+            </button>
+          </div>
+          <div class="bg-purple-100 w-full p-12">
+            <p class="text-2xl font-bold">Withdraw</p>
+            <input
+              id="withdraw-input"
+              type="text"
+              class="px-2 py-2 w-full mt-3"
+              placeholder="$ amount you want to Withdraw"
+            />
+            <button
+              id="withdraw-btn"
+              class="px-8 py-2 bg-red-300 font-bold text-sm mt-5"
+            >
+              withdraw
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Link javascript file -->
+    <script src="./deposite.js"></script>
+  </body>
 </html>
