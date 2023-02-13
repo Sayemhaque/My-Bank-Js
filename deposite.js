@@ -23,19 +23,31 @@ const totalBalance = document.getElementById("balance-amount");
 depositeBtn.addEventListener("click", function () {
   const newDepositeAmount = depositeInputField.value;
   const convertedDeopiteAmout = parseFloat(newDepositeAmount);
-  if(newDepositeAmount === ""){
-     depositeErrorMsg.innerText = "*Invalid Amount"
+  if (newDepositeAmount === "") {
+    depositeErrorMsg.innerText = "*Invalid Amount";
+  } else {
+    depositeErrorMsg.innerText = "";
+    const updataedDiposite =
+      parseFloat(convertedDeopiteAmout) + parseFloat(depositeAmount.innerText);
+    depositeAmount.innerText = updataedDiposite;
+    const totalBalanceNumber = parseFloat(totalBalance.innerText);
+    totalBalance.innerText = totalBalanceNumber + updataedDiposite;
+    depositeInputField.value = "";
   }
- else{
-  depositeErrorMsg.innerText = ""
-  const updataedDiposite =
-    parseFloat(convertedDeopiteAmout) + parseFloat(depositeAmount.innerText);
-  depositeAmount.innerText = updataedDiposite;
-  const totalBalanceNumber = parseFloat(totalBalance.innerText)
-   totalBalance.innerText = totalBalanceNumber + updataedDiposite
-   depositeInputField.value = "";
- }
 });
 
+//withdraw
 
-
+withdrawBtn.addEventListener("click", function () {
+  const newWithdrawAmount = withdrawInputField.value;
+  if (newWithdrawAmount === "") {
+    WithDrawErrorMsg.innerText = "*Invalid Amount";
+  } else {
+    const updatedWithdrawAmount =
+      parseFloat(newWithdrawAmount) + parseFloat(withdrawAmount.innerText);
+    withdrawAmount.innerText = updatedWithdrawAmount;
+    const totalBalanceNumber = parseFloat(totalBalance.innerText);
+    totalBalance.innerText = totalBalanceNumber - updatedWithdrawAmount;
+    withdrawInputField.value = "";
+  }
+});

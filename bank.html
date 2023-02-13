@@ -25,7 +25,7 @@
           </div>
           <div class="bg-red-100 w-full p-10">
             <p class="text-2xl">Withdraw</p>
-            <p class="text-4xl font-bold mt-1" id="withdraw-amount">$00</p>
+            <p class="text-4xl font-bold mt-1">$<span id="withdraw-amount">00</span></p>
           </div>
           <div class="bg-green-100 w-full p-10">
             <p class="text-2xl">Balance</p>
@@ -52,10 +52,11 @@
             <p class="text-2xl font-bold">Withdraw</p>
             <input
               id="withdraw-input"
-              type="text"
+              type="number"
               class="px-2 py-2 w-full mt-3"
               placeholder="$ amount you want to Withdraw"
             />
+            <p id="withdraw-error" class="text-red-500"></p>
             <button
               id="withdraw-btn"
               class="px-8 py-2 bg-red-300 font-bold text-sm mt-5"
